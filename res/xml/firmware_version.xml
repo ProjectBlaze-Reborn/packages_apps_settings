@@ -30,6 +30,31 @@
         settings:searchable="false"
         settings:controller="com.android.settings.deviceinfo.firmwareversion.FirmwareVersionDetailPreferenceController"/>
 
+    <!-- Blaze version -->
+    <Preference
+         android:key="blaze_version"
+         android:title="@string/blaze_version"
+         android:summary="@string/summary_placeholder"
+         settings:enableCopying="true"
+         settings:controller="com.android.settings.deviceinfo.firmwareversion.BlazeVersionPreferenceController"/>
+
+    <!-- Blaze Device -->
+    <Preference
+        android:key="about_device_name"
+        android:title="@string/about_device_name"
+        android:summary="@string/summary_placeholder"
+        settings:enableCopying="true"
+        android:selectable="false"
+        settings:controller="com.android.settings.deviceinfo.firmwareversion.AboutDeviceNamePreferenceController"/>
+
+    <!-- Blaze Maintainer  -->
+    <Preference
+        android:key="blaze_maintainer"
+        android:title="@string/blaze_maintainer"
+        android:summary="@string/summary_placeholder"
+        settings:enableCopying="true"
+        settings:controller="com.android.settings.deviceinfo.firmwareversion.BlazeMaintainerPreferenceController"/>
+
     <!-- Security patch -->
     <Preference
         android:key="security_key"

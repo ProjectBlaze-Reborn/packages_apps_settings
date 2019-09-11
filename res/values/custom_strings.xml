@@ -318,4 +318,20 @@
     <string name="icon_manager_summary">Control visibility of status bar icons</string>
 
 
+    <!-- About phone screen, Project Blaze version -->
+    <string name="blaze_version">Blaze version</string>
+    <string name="blaze_version_default">Unknown</string>
+    <string name="keywords_blaze_version">ProjectBlaze version, blaze version</string>
+
+    <!-- About phone screen, build date -->
+    <string name="build_date">Build date</string>
+    <string name="build_date_default">2015-01-01-0000</string>
+    <string name="keywords_build_date">build date, build info</string>
+
+    <!-- Blaze Maintainer -->
+    <string name="blaze_maintainer">Blaze maintainer</string>
+    
+    <!-- Device Codename -->
+    <string name="about_device_name">Blaze device</string>
+
 </resources>
