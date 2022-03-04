@@ -21,6 +21,16 @@
     android:key="top_level_settings">
 
     <com.android.settings.widget.HomepagePreference
+        android:fragment="com.blaze.house.BlazeHouse"
+        android:icon="@drawable/ic_settings_blaze"
+        android:key="top_level_blaze"
+        android:order="-160"
+        android:title="@string/blazehouse_title"
+        android:summary="@string/build_tweaks_summary_title"
+        settings:highlightableMenuKey="@string/menu_key_blaze"
+        settings:controller="com.blaze.house.TopLevelExtensionsEntryPreferenceController"/>
+
+    <com.android.settings.widget.HomepagePreference
         android:fragment="com.android.settings.network.NetworkDashboardFragment"
         android:icon="@drawable/ic_settings_wireless"
         android:key="top_level_network"

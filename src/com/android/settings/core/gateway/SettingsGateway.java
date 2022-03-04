@@ -207,6 +207,7 @@ import com.android.settings.wifi.tether.WifiTetherSettings;
 
 import com.android.settings.livedisplay.LiveDisplaySettings;
 import ink.kscope.settings.wifi.tether.WifiTetherClientManager;
+import com.blaze.house.BlazeHouse;
 
 public class SettingsGateway {
 
@@ -402,7 +403,9 @@ public class SettingsGateway {
             AccessibilityHearingAidsFragment.class.getName(),
             HearingDevicePairingFragment.class.getName(),
             LiveDisplaySettings.class.getName(),
-            WifiTetherClientManager.class.getName()
+            WifiTetherClientManager.class.getName(),
+            // Project Blaze additions
+            BlazeHouse.class.getName(),
     };
 
     public static final String[] SETTINGS_FOR_RESTRICTED = {
@@ -449,5 +452,7 @@ public class SettingsGateway {
             UserBackupSettingsActivity.class.getName(),
             Settings.MemtagPageActivity.class.getName(),
             Settings.NavigationModeSettingsActivity.class.getName(),
+             // Project Blaze additions
+            Settings.BlazeHouseSettingsActivity.class.getName(),
     };
 }

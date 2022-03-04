@@ -500,4 +500,7 @@ public class Settings extends SettingsActivity {
 
     // LiveDisplay
     public static class LiveDisplaySettingsActivity extends SettingsActivity { /* empty */ }
+
+    // BlazeHouse Additions.
+    public static class BlazeHouseSettingsActivity extends SettingsActivity { /* empty */ }
 }

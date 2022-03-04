@@ -21,6 +21,20 @@
     android:key="top_level_settings">
 
     <PreferenceCategory
+        android:order="-300"
+        android:key="top_level_blaze_category"
+        android:layout="@layout/settingslib_preference_category_no_title">
+        <com.android.settings.widget.HomepagePreference
+            android:fragment="com.blaze.house.BlazeHouse"
+            android:icon="@drawable/ic_settings_blaze"
+            android:key="top_level_blaze"
+            android:order="-310"
+            android:title="@string/blazehouse_title"
+            android:summary="@string/build_tweaks_summary_title"
+            settings:controller="com.blaze.house.TopLevelExtensionsEntryPreferenceController"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory
         android:order="-140"
         android:key="top_level_account_category"
         android:layout="@layout/settingslib_preference_category_no_title">
