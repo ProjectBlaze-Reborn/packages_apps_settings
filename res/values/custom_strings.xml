@@ -334,4 +334,16 @@
     <!-- Device Codename -->
     <string name="about_device_name">Blaze device</string>
 
+    <!-- Hardware info -->
+    <string name="platform_revision">Platform</string>
+    <string name="total_ram">Total RAM</string>
+
+    <!-- About phone cards -->
+    <string name="about_device_nearby">The device name can and will be seen by the nearby devices.</string>
+    <string name="about_device_version_type_official">OFFICIAL</string>
+    <string name="about_device_version_type_unofficial">UNOFFICIAL</string>
+    <string name="version">Version</string>
+    <string name="edit">Edit</string>
+    <string name="device_name">Device name</string>
+
 </resources>
