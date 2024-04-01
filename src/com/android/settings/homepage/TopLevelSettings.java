@@ -89,7 +89,7 @@ public class TopLevelSettings extends DashboardFragment implements SplitLayoutLi
 
     @Override
     protected int getPreferenceScreenResId() {
-        return SystemProperties.getBoolean("persist.sys.settings.revamp_ui", false) ? R.xml.top_level_settings_v2 : R.xml.top_level_settings;
+        return SystemProperties.getBoolean("persist.sys.settings.revamp_ui", false) ? R.xml.top_level_settings_v2 : R.xml.blaze_top_level_settings;
     }
 
     @Override
@@ -215,6 +215,17 @@ public class TopLevelSettings extends DashboardFragment implements SplitLayoutLi
         super.onCreatePreferences(savedInstanceState, rootKey);
         if (SystemProperties.getBoolean("persist.sys.settings.revamp_ui", false)) {
             return;
+        }
+        final PreferenceScreen screen = getPreferenceScreen();
+        for (int i = 0; i < screen.getPreferenceCount(); i++) {
+            Preference pref = screen.getPreference(i);
+            boolean isValid = pref.isEnabled() && pref.isVisible() && pref.getTitle() != null;
+            if (isValid && pref.getLayoutResource() != R.layout.blaze_dashboard_preference_top && 
+                pref.getLayoutResource() != R.layout.blaze_dashboard_preference_full && 
+                pref.getLayoutResource() != R.layout.blaze_dashboard_preference_phone && 
+                pref.getLayoutResource() != R.layout.blaze_dashboard_preference_bottom) {
+                pref.setLayoutResource(R.layout.blaze_dashboard_preference_middle);
+            }
         }
         int tintColor = Utils.getHomepageIconColor(getContext());
         iteratePreferences(preference -> {
@@ -395,7 +406,7 @@ public class TopLevelSettings extends DashboardFragment implements SplitLayoutLi
             new BaseSearchIndexProvider(
                     SystemProperties.getBoolean("persist.sys.settings.revamp_ui", false)
                             ? R.xml.top_level_settings_v2
-                            : R.xml.top_level_settings) {
+                            : R.xml.blaze_top_level_settings) {
 
                 @Override
                 protected boolean isPageSearchEnabled(Context context) {

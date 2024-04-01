@@ -67,6 +67,7 @@ android_library {
 
     resource_dirs: [
         "res",
+	    "res-blaze",
         "res-export", // for external usage
         "res-product",
         "BlazeHouse/res",
