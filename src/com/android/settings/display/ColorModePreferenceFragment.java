@@ -204,8 +204,9 @@ public class ColorModePreferenceFragment extends RadioButtonPickerFragment {
         super.updateCandidates();
 
         PreferenceScreen screen = getPreferenceScreen();
-        getPreferenceManager().inflateFromResource(screen.getContext(), R.xml.color_mode_settings,
-                screen);
+        if (ColorDisplayManager.isColorTransformAccelerated(screen.getContext())) {
+            getPreferenceManager().inflateFromResource(screen.getContext(), R.xml.color_mode_settings, screen);
+        }
     }
 
     @Override
