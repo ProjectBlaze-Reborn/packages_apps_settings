@@ -361,4 +361,7 @@
     <string name="selinux_status_disabled">Disabled</string>
     <string name="selinux_status_permissive">Permissive</string>
     <string name="selinux_status_enforcing">Enforcing</string>
+
+    <!-- Color mode -->
+    <string name="color_mode_balance_category">Color balance</string>
 </resources>
