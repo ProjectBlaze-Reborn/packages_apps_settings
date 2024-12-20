@@ -569,9 +569,7 @@ public abstract class DashboardFragment extends SettingsPreferenceFragment
                     if (tile.hasGroupKey()
                             && mDashboardTilePrefKeys.containsKey(tile.getGroupKey())) {
                         group = screen.findPreference(tile.getGroupKey());
-                    } else if (ACCOUNT_INJECTED_KEYS.contains(key)) {
-                        group = screen.findPreference("top_level_account_category");
-                    } else if (SECURITY_PRIVACY_INJECTED_KEYS.contains(key)) {
+                    } else if (ACCOUNT_INJECTED_KEYS.contains(key) || SECURITY_PRIVACY_INJECTED_KEYS.contains(key)) {
                         group = screen.findPreference("top_level_security_privacy_category");
                     } else {
                         group = screen.findPreference("top_level_extras_category");
