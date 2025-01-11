@@ -250,7 +250,7 @@ public class AppInfoWithHeaderTest {
         }
 
         @Override
-        protected boolean hasInteractAcrossUsersFullPermission() {
+        protected boolean hasInteractAcrossUsersPermission() {
             return true;
         }
 
@@ -267,7 +267,7 @@ public class AppInfoWithHeaderTest {
 
     private static final class TestFragmentWithoutPermission extends TestFragment {
         @Override
-        protected boolean hasInteractAcrossUsersFullPermission() {
+        protected boolean hasInteractAcrossUsersPermission() {
             return false;
         }
     }

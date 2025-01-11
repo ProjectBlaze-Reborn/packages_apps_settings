@@ -139,7 +139,7 @@ public abstract class AppInfoBase extends SettingsPreferenceFragment
         if (intent != null && intent.hasExtra(Intent.EXTRA_USER_HANDLE)) {
             mUserId = ((UserHandle) intent.getParcelableExtra(Intent.EXTRA_USER_HANDLE))
                     .getIdentifier();
-            if (mUserId != UserHandle.myUserId() && !hasInteractAcrossUsersFullPermission()) {
+            if (mUserId != UserHandle.myUserId() && !hasInteractAcrossUsersPermission()) {
                 Log.w(TAG, "Intent not valid.");
                 finish();
                 return "";
@@ -171,7 +171,7 @@ public abstract class AppInfoBase extends SettingsPreferenceFragment
     }
 
     @VisibleForTesting
-    protected boolean hasInteractAcrossUsersFullPermission() {
+    protected boolean hasInteractAcrossUsersPermission() {
         Activity activity = getActivity();
         if (!(activity instanceof SettingsActivity)) {
             return false;
